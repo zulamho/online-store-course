@@ -136,7 +136,7 @@ Rating.belongsTo(Device);
 Device.hasMany(BascketDevice);
 BascketDevice.belongsTo(Device);
 
-Device.hasMany(DeviceInfo);
+Device.hasMany(DeviceInfo, {as: "info"});
 DeviceInfo.belongsTo(Device);
 
 // Type.belongsToMany(Brand); // связь многим ко многим .. тип принадл многим бренд
